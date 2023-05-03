@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 import logo1 from './image/BeatBlender.png';
 
 class Navbar extends Component {
-    state = {clicked:false}
+    state = {clicked: false};
+    handleClick = () =>{
+        this.setState({clicked: !this.state.clicked})
+    }
 
     render() {
   return (
@@ -14,11 +17,15 @@ class Navbar extends Component {
     <img className='logo1' src={logo1} alt="Logo" />
     <h1 className="navbar-logo"> </h1>
 
-        <div className="menu-icons">
+        <div className="menu-icons" onClick=
+        {this.handleClick}>
+
             <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
 
-        <ul className="nav-menu">
+        <ul className={this.state.clicked ? 
+        " nav-menu active " : "nav-menu" }>
+
             {Menuitems.map((item, index) => {
                 return (    
                 <li key={index}>
