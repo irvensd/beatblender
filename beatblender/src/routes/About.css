@@ -1,0 +1,11 @@
+.about-text {
+    font-size: 1.5em;
+    text-align: center;
+    color: #222;
+    margin: 0;
+    padding: 2.6em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}

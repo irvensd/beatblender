@@ -1,12 +1,21 @@
-#root {
-    height: 100%;
-  }
-  
 
 .hero {
     width: 100%;
     height: 100vh;
     position: relative;
+  }
+
+  .hero-mid {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+  }
+
+  .hero-mid  h1 {
+    padding-top: 4rem !important;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #222;
   }
 
 .hero-img {
@@ -52,6 +61,10 @@
     color: #222;
 }
 
+
+.hero-text .show .hide {
+    display: none;
+}
 
 @media screen and (max-width:555px) {
     .hero-text h1 {
