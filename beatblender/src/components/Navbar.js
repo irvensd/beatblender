@@ -14,8 +14,7 @@ class Navbar extends Component {
     render() {
   return (
     <nav className="NavbarItems">
-    <img className='logo1' src={logo1} alt="Logo" />
-    <h1 className="navbar-logo"> </h1>
+    <img className="navbar-logo" src={logo1} alt="Logo" />
 
         <div className="menu-icons" onClick=
         {this.handleClick}>
@@ -29,9 +28,9 @@ class Navbar extends Component {
             {Menuitems.map((item, index) => {
                 return (    
                 <li key={index}>
-                    <a className={item.cName}  href="/">
+                    <Link className={item.cName}  to={item.url}>
                     <i className={item.icon}></i>{item.title}
-                    </a>
+                    </Link>
                 </li>
                 )
             })}

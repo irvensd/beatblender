@@ -1,25 +1,26 @@
 import React from 'react';
 import './App.css';
 // import router 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // import components
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Services from './components/Services';
-import Contact from './components/Contact';
+import Home from './routes/Home';
+import About from './routes/About';
+import Services from './routes/Services';
+import Contact from './routes/Contact';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
+    <div className="App">
+    
       <Routes>
-        <Route path="/" exact element={<Home/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/services" element={<Services/>} />
-        <Route path="/contact" element={<Contact/>} />
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/services" element={<Services/>}/>
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
-    </Router>
+
+
+</div>
   );
 }
 
